@@ -52,7 +52,6 @@ const handleSubmit = (e) => {
     showSuccess(misc);
   }
 
-
   const income =
     Number(hand.value) +
     Number(bank.value) +
@@ -61,9 +60,6 @@ const handleSubmit = (e) => {
   const liabilities = Number(debt.value) + Number(misc.value);
   const netIncome = income - liabilities;
   net.value = netIncome;
-  console.log(typeof netIncome)
-  // zakat.value = 0.025 * netIncome;
-
 
   if (netIncome < 136640) {
     zakat.innerHTML = "You do not meet the minimum requirement to pay Zakat for this Year"
